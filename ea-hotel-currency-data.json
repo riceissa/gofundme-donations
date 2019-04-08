@@ -1,0 +1,90 @@
+[
+    {
+        "success": true,
+        "timestamp": 1546991999,
+        "historical": true,
+        "base": "EUR",
+        "date": "2019-01-08",
+        "rates": {
+            "USD": 1.145574,
+            "GBP": 0.899396
+        }
+    },
+    {
+        "success": true,
+        "timestamp": 1549670399,
+        "historical": true,
+        "base": "EUR",
+        "date": "2019-02-08",
+        "rates": {
+            "USD": 1.133549,
+            "GBP": 0.875735
+        }
+    },
+    {
+        "success": true,
+        "timestamp": 1552089599,
+        "historical": true,
+        "base": "EUR",
+        "date": "2019-03-08",
+        "rates": {
+            "USD": 1.123949,
+            "GBP": 0.863451
+        }
+    },
+    {
+        "success": true,
+        "timestamp": 1552694399,
+        "historical": true,
+        "base": "EUR",
+        "date": "2019-03-15",
+        "rates": {
+            "USD": 1.134449,
+            "GBP": 0.851818
+        }
+    },
+    {
+        "success": true,
+        "timestamp": 1553039999,
+        "historical": true,
+        "base": "EUR",
+        "date": "2019-03-19",
+        "rates": {
+            "USD": 1.135454,
+            "GBP": 0.855679
+        }
+    },
+    {
+        "success": true,
+        "timestamp": 1553126399,
+        "historical": true,
+        "base": "EUR",
+        "date": "2019-03-20",
+        "rates": {
+            "USD": 1.142752,
+            "GBP": 0.8654
+        }
+    },
+    {
+        "success": true,
+        "timestamp": 1553903999,
+        "historical": true,
+        "base": "EUR",
+        "date": "2019-03-29",
+        "rates": {
+            "USD": 1.123153,
+            "GBP": 0.861049
+        }
+    },
+    {
+        "success": true,
+        "timestamp": 1554076799,
+        "historical": true,
+        "base": "EUR",
+        "date": "2019-03-31",
+        "rates": {
+            "USD": 1.122347,
+            "GBP": 0.861873
+        }
+    }
+]
