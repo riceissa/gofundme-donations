@@ -34,7 +34,7 @@ def main():
                 mysql_quote("EA Hotel"),  # donee
                 str(amount),  # amount
                 mysql_quote(donation_date),  # donation_date
-                donation_date_precision,  # donation_date_precision
+                mysql_quote(donation_date_precision),  # donation_date_precision
                 mysql_quote("donation log"),  # donation_date_basis
                 mysql_quote("Effective altruism/movement growth"),  # cause_area
                 mysql_quote("https://www.gofundme.com/ea-hotel"),  # url
