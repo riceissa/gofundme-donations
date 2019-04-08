@@ -11,7 +11,7 @@ apikey = ""
 with open("apikey.txt", "r") as f:
     apikey = next(f).strip()
 
-payload = {"access_key": apikey, "symbols": "USD,GBP"}
+payload = {"access_key": apikey, "symbols": "USD," + sys.argv[2]}
 
 # Find the dates for which we need currency conversion rates
 date_list = []
@@ -31,5 +31,4 @@ for date_string in date_list:
         j = r.json()
         data.append(j)
 
-with open("currency-data.json", "w") as f:
-    json.dump(data, f, indent=4)
+json.dump(data, sys.stdout, indent=4)

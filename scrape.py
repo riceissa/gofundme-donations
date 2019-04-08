@@ -7,7 +7,6 @@ import csv
 import datetime
 from bs4 import BeautifulSoup
 
-import pdb
 
 def main():
     fieldnames = ["donor_name", "amount", "reference_date", "relative_donation_date"]
