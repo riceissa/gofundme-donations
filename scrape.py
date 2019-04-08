@@ -10,7 +10,7 @@ from bs4 import BeautifulSoup
 import pdb
 
 def main():
-    fieldnames = ["donor_name", "amount", "current_date", "relative_donation_date"]
+    fieldnames = ["donor_name", "amount", "reference_date", "relative_donation_date"]
     writer = csv.DictWriter(sys.stdout, fieldnames=fieldnames)
     writer.writeheader()
 
@@ -43,7 +43,7 @@ def main():
             writer.writerow({
                 "donor_name": donor_name,
                 "amount": amount,
-                "current_date": datetime.date.today().strftime("%Y-%m-%d"),
+                "reference_date": datetime.date.today().strftime("%Y-%m-%d"),
                 "relative_donation_date": relative_donation_date,
             })
             num_donations_on_page += 1
