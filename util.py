@@ -7,9 +7,9 @@ def calc_donation_date(reference_date, relative_donation_date):
     ref_date = datetime.datetime.strptime(reference_date, "%Y-%m-%d")
     quantity, unit, ago = relative_donation_date.split()
     assert ago == "ago"
-    if unit == "days":
+    if unit == "days" or unit == "day":
         return ref_date - datetime.timedelta(days=int(quantity))
-    elif unit == "months":
+    elif unit == "months" or unit == "month":
         ref_month = ref_date.month
         back_months = int(quantity)  # Number of months to go back in time
 
