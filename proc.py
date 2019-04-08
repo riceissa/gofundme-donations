@@ -2,6 +2,7 @@
 
 import csv
 import sys
+import json
 
 import util
 
@@ -18,6 +19,13 @@ def main():
         for row in reader:
             donation_date = util.calc_donation_date(row['reference_date'],
                                                     row['relative_donation_date']).strftime("%Y-%m-%d")
+            _, unit, ago = row['relative_donation_date'].split()
+            assert ago == "ago"
+            if unit == "days" or unit == "day":
+                donation_date_precision = "day"
+            elif unit == "months" or unit == "month":
+                donation_date_precision = "month"
+
             assert row["amount"].startswith("£")
             original_amount = float(row["amount"].replace("£", "").replace(",", ""))
             amount = currency_to_usd(original_amount, "GBP", donation_date)
@@ -26,7 +34,7 @@ def main():
                 mysql_quote("EA Hotel"),  # donee
                 str(amount),  # amount
                 mysql_quote(donation_date),  # donation_date
-                ,  # donation_date_precision
+                donation_date_precision,  # donation_date_precision
                 mysql_quote("donation log"),  # donation_date_basis
                 mysql_quote("Effective altruism/movement growth"),  # cause_area
                 mysql_quote("https://www.gofundme.com/ea-hotel"),  # url

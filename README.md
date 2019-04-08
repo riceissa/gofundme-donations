@@ -27,8 +27,8 @@ If the gofundme page of interest uses a currency other than USD, get currency da
 Run processing script to generate a SQL file:
 
 ```bash
-# the general syntax is: ./proc.py
-./proc.py
+# the general syntax is: ./proc.py DONATIONS_CSV_FILE CURRENCY_JSON > OUT_FILE
+./proc.py ea-hotel-data.csv ea-hotel-currency-data.json > ea-hotel.sql
 ```
 
 ## License
