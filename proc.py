@@ -44,6 +44,11 @@ def main():
                 mysql_quote(donation_date),  # currency_conversion_date
                 mysql_quote("Fixer.io"),  # currency_conversion_basis
             ]) + ")")
+            first = False
+        if not first:
+            # If first is still true, that means we printed nothing above,
+            # so no need to print the semicolon
+            print(";")
 
 
 def mysql_quote(x):
